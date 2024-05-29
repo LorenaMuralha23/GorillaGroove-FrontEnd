@@ -138,7 +138,7 @@ body {
     display: flex;
     justify-content: center; /* Centraliza os cards horizontalmente */
     gap: 60px; /* Adiciona um espaçamento entre os cards */
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .album-card {
@@ -148,6 +148,12 @@ body {
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.album-card:hover {
+    opacity: 0.8; /* Diminui a opacidade ao passar o mouse */
+    transform: scale(0.95); /* Diminui o tamanho ao passar o mouse */
 }
 
 .album-card img {
@@ -171,3 +177,10 @@ body {
     font-weight: bold;
 }
 
+.section-title {
+    color: #fff;
+    margin-top: 20px; /* Reduz o espaçamento acima do título */
+    font-size: 24px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito para o título */
+    margin-left: 150px; /* Adiciona um espaçamento à esquerda para alinhar com os cards */
+}
