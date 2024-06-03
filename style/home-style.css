@@ -145,12 +145,27 @@ body {
     justify-content: center;
     gap: 1em;
 }
+
 .progress-bar{
+    -webkit-appearance: none;
     height: 4px;
-    border-radius: 10px;
     width: 30%;
-    background-color: #ccc4;
+    background: rgba(30, 30, 30, 1);
+    border-radius: 20px;
+    outline: none;
+    overflow: hidden;
 }
+
+
+.progress-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 4px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgba(195, 0, 212, 1), rgba(101, 0, 110, 1));
+    cursor: pointer;
+}
+
 
 .time {
     color: #b3b3b3;
