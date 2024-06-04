@@ -5,6 +5,25 @@ body {
     color: #fff;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+.search-bar {
+    width: 400px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin: auto;
+    background-color: rgba(47, 2, 92, 0.54);
+    color: #ffff;
+}
+
 .container {
     display: flex;
     height: 100vh;
@@ -69,28 +88,6 @@ body {
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    
-}
-
-.search-bar {
-    width: 400px;
-    padding: 8px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    margin: auto;
-    background-color: rgba(47, 2, 92, 0.54);
-    color: #ffff;
-}
-
-.content {
-    flex: 1;
-}
 
 .music-player-container {
     width: 100%;
@@ -251,92 +248,6 @@ body {
     cursor: pointer;
 }
 
-
-.user-activity{
-    margin-top: 35px;
-}
-
-.user-activity ul li:not(:first-child) {
-    padding-left: 10px; /* Adiciona um recuo aos itens "Recently Played" e "Playlists" */
-}
-
-.card {
-    width: 900px;
-    height: 250px;
-    border-radius: 15px;
-    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do card */
-    margin: 0 auto 20px; /* Centraliza o card horizontalmente e adiciona um espaçamento abaixo */
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-    transition: opacity 0.3s ease, transform 0.3s ease; 
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o card sem distorcer */
-}
-
-.card:hover {
-    opacity: 0.8;
-    transform: scale(0.99); /* Diminui o tamanho do card */
-}
-
-.card:not(:hover) {
-    opacity: 1;
-    transform: scale(1); /* Retorna ao tamanho original */
-}
-
-.album-cards-container {
-    display: flex;
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    gap: 60px; /* Adiciona um espaçamento entre os cards */
-    margin-top: 20px;
-}
-
-.album-card {
-    width: 180px;
-    height: 250px;
-    background-color: #000;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.album-card:hover {
-    opacity: 0.8; /* Diminui a opacidade ao passar o mouse */
-    transform: scale(0.95); /* Diminui o tamanho ao passar o mouse */
-}
-
-.album-card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #fff;
-}
-
-.album-info {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.album-info p {
-    margin: 0;
-    color: #fff;
-    font-size: 14px;
-}
-
-.album-name {
-    font-weight: bold;
-}
-
-.section-title {
-    color: #fff;
-    margin-top: 20px; /* Reduz o espaçamento acima do título */
-    font-size: 24px; /* Tamanho da fonte do título */
-    font-weight: bold; /* Negrito para o título */
-    margin-left: 150px; /* Adiciona um espaçamento à esquerda para alinhar com os cards */
-}
 
 .play-pause-button{
     background-color: rgba(32, 25, 25, 1);
