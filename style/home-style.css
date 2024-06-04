@@ -5,28 +5,10 @@ body {
     color: #fff;
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    
-}
-
-.search-bar {
-    width: 400px;
-    padding: 8px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    margin: auto;
-    background-color: rgba(47, 2, 92, 0.54);
-    color: #ffff;
-}
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 93vh;
     overflow: hidden;
 }
 
