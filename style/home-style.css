@@ -13,9 +13,13 @@ body {
 
 .sidebar {
     width: 240px;
-    background: linear-gradient(to bottom right, rgba(32, 25, 25, 1), rgba(43, 0, 86, 1)); /* Gradiente de fundo */
+    background: linear-gradient(to bottom right, rgba(32, 25, 25, 1), rgba(43, 0, 86, 1));
     padding: 20px;
     box-sizing: border-box;
+    position: fixed; /* Fixa a barra lateral */
+    top: 0; /* Ajusta para o topo */
+    bottom: 0; /* Estende até o final da tela */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
 }
 
 .sidebar .logo {
@@ -61,6 +65,8 @@ body {
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
+    margin-left: 240px; /* Ajusta o espaço à esquerda para compensar a barra lateral */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
 }
 
 .header {
@@ -94,25 +100,38 @@ body {
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
+    position: fixed; /* Fixa o player de música */
+    bottom: 0; /* Ajusta para a parte inferior da tela */
+    left: 0; /* Alinha com o canto esquerdo */
+    right: 0; /* Estende até o canto direito */
 }
 
 .music-info {
     display: flex;
     align-items: center;
     margin-right: 20px;
+    width: 300px;
+    height: 50px;
 }
 
-.music-info img {
-    width: 60px;
-    height: 60px;
-    border-radius: 4px;
+
+.song-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3px;
+    height: 100%;
+    margin-left: 15px;
 }
 
-.song-details {
-    margin-left: 10px;
-    color: #fff;
+.song-details p{
+    padding: 0px;
+    margin: 0;
+}
+
+.song-artist{
+    font-size: 14px;
 }
 
 .music-controls {
@@ -121,6 +140,22 @@ body {
     flex-direction: column;
     flex-grow: 1;
     margin-right: 20px;
+}
+
+.music-img-container{
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+
+.music-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
 }
 
 .control-buttons{
@@ -159,13 +194,17 @@ body {
 
 .progress-bar::-webkit-slider-thumb{
     -webkit-appearance: none;
-    width: 20px;
+    width: 50%;
     height: 4px;
     border-radius: 20px;
     background: linear-gradient(to right, rgba(195, 0, 212, 1), rgba(101, 0, 110, 1));
     cursor: pointer;
 }
 
+.progress-bar::-moz-range-progress{
+    -webkit-appearance: none;   
+    background: linear-gradient(to right, rgba(195, 0, 212, 1), rgba(101, 0, 110, 1));
+}
 
 .time {
     color: #b3b3b3;
@@ -177,13 +216,19 @@ body {
     align-items: center;
 }
 
-.volume-button {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    margin-right: 10px;
+.volume-icon{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    margin-right: 10px;
+}
+
+.volume-icon img{
+    width: 20px;
+    height: 20px;
 }
 
 .volume-range {
@@ -193,7 +238,7 @@ body {
     background: #484848;
     outline: none;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .volume-range::-webkit-slider-thumb {
@@ -291,4 +336,66 @@ body {
     font-size: 24px; /* Tamanho da fonte do título */
     font-weight: bold; /* Negrito para o título */
     margin-left: 150px; /* Adiciona um espaçamento à esquerda para alinhar com os cards */
+}
+
+.play-pause-button{
+    background-color: rgba(32, 25, 25, 1);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-pause-button img{
+    width: 20px;
+    height: 20px;
+}
+
+.song-buttons{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.song-buttons img{
+    width: 20px;
+    height: 20px;
+}
+
+#previous-button{
+    transform: rotate(180deg);
+}
+
+.expand-button{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.expand-button img{
+    width: 20px;
+    height: 20px;
+}
+
+.download-button{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.download-button img{
+    width: 20px;
+    height: 20px;
 }
