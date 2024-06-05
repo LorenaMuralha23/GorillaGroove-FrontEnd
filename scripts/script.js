@@ -66,5 +66,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const playlistsLink = document.getElementById('playlists-link');
+    const homeLink = document.getElementById('home-link');
+    const genreLink = document.getElementById('genre-link')
+    const mainIframe = document.getElementById('main-iframe');
+
+    homeLink.addEventListener('click', function(event){
+        event.preventDefault();
+        mainIframe.src = '../pages/initial-page.html';
+    });
+
+    genreLink.addEventListener('click', function(event){
+        event.preventDefault();
+        mainIframe.src = '../pages/genres.html';
+    });
+
+    playlistsLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão do link
+        mainIframe.src = '../pages/playlists.html'; // Altere para o caminho correto da sua página de playlists
+    });
+});
 
 
