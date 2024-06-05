@@ -69,7 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function() {
     const playlistsLink = document.getElementById('playlists-link');
     const homeLink = document.getElementById('home-link');
-    const genreLink = document.getElementById('genre-link')
+    const genreLink = document.getElementById('genre-link');
+    const recentlyPlayedLink = document.getElementById('rty-played-link');
     const mainIframe = document.getElementById('main-iframe');
 
     homeLink.addEventListener('click', function(event){
@@ -80,6 +81,11 @@ document.addEventListener('DOMContentLoaded', function() {
     genreLink.addEventListener('click', function(event){
         event.preventDefault();
         mainIframe.src = '../pages/genres.html';
+    });
+
+    recentlyPlayedLink.addEventListener('click', function(event){
+        event.preventDefault();
+        mainIframe.src = '../pages/recently-played.html';
     });
 
     playlistsLink.addEventListener('click', function(event) {
