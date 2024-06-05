@@ -293,6 +293,262 @@ body {
     height: 20px;
 }
 
+#expanded-player {
+    display: none;
+    position: fixed;
+    background: linear-gradient(to bottom right, rgba(38, 1, 75, 1), rgba(27, 22, 22, 1));
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.expanded-player-content {
+    width: 100%;
+    height: 100%;
+}
+
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.music-info-expanded h1,
+h2 {
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.music-info-expanded h2 {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.back-button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.back-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.circle {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(30, 30, 30, 1);
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 70%;
+    background: linear-gradient(to right, rgba(101, 0, 110, 1), rgba(240, 66, 255, 1));
+    z-index: -1;
+}
+
+.artist-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.play-pause-circle {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(43, 0, 86, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    cursor: pointer;
+}
+
+.play-pause-icon {
+    width: 40px;
+    height: 40px;
+    /* Adicione a imagem do ícone de play/pause como plano de fundo aqui */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.control-button {
+    width: 8vw;
+    height: 8vw;
+    background-color: rgba(32, 25, 25, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5vw;
+    cursor: pointer;
+}
+
+.song-buttons-expanded{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 75%;
+}
+
+.song-buttons-expanded img{
+    width: 40px;
+    height: 40px;
+}
+
+#previous-button-expanded{
+    transform: rotate(180deg);
+    right: 60%;
+}
+
+#next-button-expanded{
+    left: 60%;
+}
+
+.progress-container-expanded{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 80px;
+}
+
+.progress-bar-expanded {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 50%;
+    background: rgba(30, 30, 30, 1);
+    border-radius: 20px;
+    outline: none;
+    overflow: hidden;
+}
+
+
+.progress-bar-expanded::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgba(195, 0, 212, 1), rgba(101, 0, 110, 1));
+    cursor: pointer;
+}
+
+.progress-bar-expanded::-moz-range-progress {
+    -webkit-appearance: none;
+    background: linear-gradient(to right, rgba(195, 0, 212, 1), rgba(101, 0, 110, 1));
+}
+
+.time-expanded{
+    color: #b3b3b3;
+    margin-right: 10px;
+}
+
+
+.volume-controls-expanded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    flex-direction: column;
+    top: 50%;
+    right: 0;
+}
+
+.volume-controls-expanded input{
+    transform: rotate(-90deg);
+}
+
+.volume-icon{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 15px;
+}
+
+.volume-icon img{
+    width: 20px;
+    height: 20px;
+}
+
+.volume-range-expanded {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 5px;
+    background: #484848;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.volume-range-expanded::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.download-button-expanded{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.download-button-expanded img{
+    width: 20px;
+    height: 20px;
+}
 
 /* Estilos para a barra de rolagem */
 ::-webkit-scrollbar {

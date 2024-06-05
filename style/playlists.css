@@ -58,7 +58,7 @@ body {
 }
 
 .album-card:hover {
-    opacity: 0.8;
+    opacity: 0.6;
     transform: scale(0.95);
 }
 
@@ -67,6 +67,17 @@ body {
     height: 70%;
     background-color: #000;
 }
+
+.play-icon {
+    position: absolute;
+    bottom: -50px; /* Inicialmente fora da tela */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0; /* Inicialmente invisível */
+    transition: bottom 0.5s ease, opacity 0.5s ease;
+}   
 
 .album-card img {
     width: 100%;
