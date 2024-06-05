@@ -292,3 +292,26 @@ body {
     width: 20px;
     height: 20px;
 }
+
+
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* largura da barra de rolagem */
+    right: 0; /* Mantém a barra de rolagem no lado direito da tela */
+}
+
+/* Estilos para o rastreio da barra de rolagem (a parte "não clicável") */
+::-webkit-scrollbar-track {
+    background: rgba(30, 30, 30, 1); /* cor de fundo */
+}
+
+/* Estilos para a alça (thumb) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, rgba(195, 0, 212, 1), rgba(101, 0, 110, 1));; /* cor da alça */
+    border-radius: 6px; /* borda arredondada */
+}
+
+/* Estilos para a alça durante o hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* cor da alça durante o hover */
+}
