@@ -16,18 +16,45 @@
     </header>
     <div class="background-image"></div>
     <div class="login-container">
-        <h1>Login</h1>
-        <form>
-            <div class="input-group">
-                <input type="email" id="email" placeholder="Email">
+        <div class="form-wrapper">
+            <div class="form-content login-form">
+                <h1>Login</h1>
+                <form>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Password">
+                        <span class="toggle-password" onclick="togglePassword()">Show</span>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don’t have an account? <a href="#" id="show-register">Register</a></p>
             </div>
-            <div class="input-group">
-                <input type="password" id="password" placeholder="Password">
-                <span class="toggle-password" onclick="togglePassword()">Show</span>
+            <div class="form-content register-form">
+                <h1>Create New Account</h1>
+                <form>
+                    <div class="input-group">
+                        <input type="text" id="first-name" placeholder="First Name">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="last-name" placeholder="Last Name">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="username" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="new-email" placeholder="Email">
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="new-password" placeholder="Password">
+                        <span class="toggle-password" onclick="togglePassword()">Show</span>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
             </div>
-            <button type="submit">Login</button>
-        </form>
-        <p>Don’t have an account? <a href="#">Register</a></p>
+        </div>
     </div>
     <script src="../scripts/script.js"></script>
 </body>

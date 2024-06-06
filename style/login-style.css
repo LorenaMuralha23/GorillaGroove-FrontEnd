@@ -18,7 +18,6 @@ body {
     overflow: hidden; /* Remove scrollbar */
 }
 
-
 header {
     display: flex;
     justify-content: space-between;
@@ -47,8 +46,6 @@ nav a:hover {
     opacity: 0.5;
 }
 
-
-
 .background-image {
     position: absolute;
     top: 0;
@@ -64,12 +61,11 @@ nav a:hover {
 
 .login-container {
     width: 450px;
-    height: 450px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid rgba(236, 114, 239, 1);
     border-radius: 15px;
     margin: auto;
-    padding: 40px;
+    padding: 0;
     box-sizing: border-box;
     text-align: center;
     position: absolute;
@@ -77,14 +73,35 @@ nav a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1; /* Mantém o container acima da imagem de fundo */
+    overflow: hidden; /* Garante que os formulários não excedam os limites do contêiner */
+    transition: height 0.5s ease-in-out;
+    
 }
 
-.login-container h1 {
-    margin-bottom: 20px;
+.form-wrapper {
+    display: flex;
+    width: 200%; /* Duplicar a largura para acomodar ambos os formulários */
+    transition: transform 0.5s ease-in-out;
+}
+
+.form-content {
+    width: 50%; /* Cada formulário ocupa metade do contêiner */
+    padding: 40px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.4);
+    
+}
+
+.register-form {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .input-group {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     position: relative;
 }
 
@@ -121,6 +138,7 @@ button {
     color: white;
     font-size: 18px;
     cursor: pointer;
+    margin-top: 20px;
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -129,7 +147,6 @@ button:hover {
     transform: scale(0.99);
     opacity: 0.9;
 }
-
 
 .login-container p {
     font-size: 14px;
@@ -146,6 +163,14 @@ button:hover {
     opacity: 0.8;
 }
 
+.show-register .form-wrapper {
+    transform: translateX(-50%);
+}
 
+.login-container.show-login {
+    height: 450px; /* Altura do contêiner de login */
+}
 
-
+.login-container.show-register {
+    height: 600px; /* Altura do contêiner de registro */
+}

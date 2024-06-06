@@ -94,4 +94,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const showRegisterLink = document.getElementById('show-register');
+    const showLoginLink = document.getElementById('show-login');
+    const loginContainer = document.querySelector('.login-container');
+    const formWrapper = document.querySelector('.form-wrapper');
+
+    showRegisterLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        formWrapper.style.transform = 'translateX(-50%)';
+        loginContainer.classList.remove('show-login');
+        loginContainer.classList.add('show-register');
+    });
+
+    showLoginLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        formWrapper.style.transform = 'translateX(0)';
+        loginContainer.classList.remove('show-register');
+        loginContainer.classList.add('show-login');
+    });
+
+    // Inicializa com a classe show-login
+    loginContainer.classList.add('show-login');
+});
+
+
+
 
